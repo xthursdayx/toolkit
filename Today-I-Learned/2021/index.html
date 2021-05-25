@@ -1,0 +1,692 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="It's Rammus Toolkit. A collection of snippets, examples and solutions."><link href=https://rammusxu.github.io/toolkit/Today-I-Learned/2021/ rel=canonical><meta name=author content="Rammus Xu"><link rel="shortcut icon" href=../../assets/images/favicon.png><meta name=generator content="mkdocs-1.1, mkdocs-material-5.1.6"><title>2021 - Rammus Toolkit</title><link rel=stylesheet href=../../assets/stylesheets/main.4b9ffd7b.min.css><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback"><style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style><link rel="preconnect dns-prefetch" href=https://www.google-analytics.com><script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-67048750-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script><script async src=https://www.google-analytics.com/analytics.js></script></head> <body dir=ltr> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#2021-05-06 class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header-nav md-grid" aria-label=Header> <a href=https://rammusxu.github.io/toolkit title="Rammus Toolkit" class="md-header-nav__button md-logo" aria-label="Rammus Toolkit"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><path d="M502.63 214.63l-45.25-45.25c-6-6-14.14-9.37-22.63-9.37H384V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v80H77.25c-8.49 0-16.62 3.37-22.63 9.37L9.37 214.63c-6 6-9.37 14.14-9.37 22.63V320h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-82.75c0-8.48-3.37-16.62-9.37-22.62zM320 160H192V96h128v64zm64 208c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H192v16c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H0v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96H384v16z"/></svg> </a> <label class="md-header-nav__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg> </label> <div class=md-header-nav__title data-md-component=header-title> <div class=md-header-nav__ellipsis> <span class="md-header-nav__topic md-ellipsis"> Rammus Toolkit </span> <span class="md-header-nav__topic md-ellipsis"> 2021 </span> </div> </div> <label class="md-header-nav__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query data-md-state=active> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </label> <button type=reset class="md-search__icon md-icon" aria-label=Clear data-md-component=search-reset tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg> </button> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header-nav__source> <a href=https://github.com/RammusXu/toolkit/ title="Go to repository" class=md-source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=https://rammusxu.github.io/toolkit title="Rammus Toolkit" class="md-nav__button md-logo" aria-label="Rammus Toolkit"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><path d="M502.63 214.63l-45.25-45.25c-6-6-14.14-9.37-22.63-9.37H384V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v80H77.25c-8.49 0-16.62 3.37-22.63 9.37L9.37 214.63c-6 6-9.37 14.14-9.37 22.63V320h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-82.75c0-8.48-3.37-16.62-9.37-22.62zM320 160H192V96h128v64zm64 208c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H192v16c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H0v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96H384v16z"/></svg> </a> Rammus Toolkit </label> <div class=md-nav__source> <a href=https://github.com/RammusXu/toolkit/ title="Go to repository" class=md-source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. title="👋 Welcome" class=md-nav__link> 👋 Welcome </a> </li> <li class=md-nav__item> <a href=../../help/ title="🌈 Help" class=md-nav__link> 🌈 Help </a> </li> <li class=md-nav__item> <a href=../../writing-tools/ title=寫作工具 class=md-nav__link> 寫作工具 </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-4 type=checkbox id=nav-4 checked> <label class=md-nav__link for=nav-4> Today I Learned <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label="Today I Learned" data-md-level=1> <label class=md-nav__title for=nav-4> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Today I Learned </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../2019/ title=2019 class=md-nav__link> 2019 </a> </li> <li class=md-nav__item> <a href=../2020/ title=2020 class=md-nav__link> 2020 </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> 2021 <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg> </span> </label> <a href=./ title=2021 class="md-nav__link md-nav__link--active"> 2021 </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Table of contents </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#2021-05-06 class=md-nav__link> 2021-05-06 </a> <nav class=md-nav aria-label=2021-05-06> <ul class=md-nav__list> <li class=md-nav__item> <a href=#kubernetes-upgrade-cert-manager-to-v131 class=md-nav__link> Kubernetes - Upgrade cert-manager to v1.3.1 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-04-29 class=md-nav__link> 2021-04-29 </a> <nav class=md-nav aria-label=2021-04-29> <ul class=md-nav__list> <li class=md-nav__item> <a href=#redis-cluster-failover class=md-nav__link> Redis - Cluster failover </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-04-15 class=md-nav__link> 2021-04-15 </a> <nav class=md-nav aria-label=2021-04-15> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mongo-sharding-not-enabled-for-db class=md-nav__link> Mongo - sharding not enabled for db </a> </li> <li class=md-nav__item> <a href=#mongo-update-on-a-sharded-collection-must-either-contain-an-exact-match-on-_id-or-must-target-a-single-shard class=md-nav__link> Mongo - update on a sharded collection must either contain an exact match on _id or must target a single shard </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-04-14 class=md-nav__link> 2021-04-14 </a> <nav class=md-nav aria-label=2021-04-14> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mongo-transaction class=md-nav__link> Mongo - transaction </a> </li> <li class=md-nav__item> <a href=#gke-neg-get-502-when-rollingupate class=md-nav__link> GKE - NEG get 502 when rollingUpate </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-04-13 class=md-nav__link> 2021-04-13 </a> <nav class=md-nav aria-label=2021-04-13> <ul class=md-nav__list> <li class=md-nav__item> <a href=#gsutil-download-large-file-with-crcmod-on-macos class=md-nav__link> gsutil - Download large file with crcmod on macOS </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-29 class=md-nav__link> 2021-03-29 </a> <nav class=md-nav aria-label=2021-03-29> <ul class=md-nav__list> <li class=md-nav__item> <a href=#kubernetes-install-cert-manager-v120 class=md-nav__link> Kubernetes - Install cert-manager v1.2.0 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-25 class=md-nav__link> 2021-03-25 </a> <nav class=md-nav aria-label=2021-03-25> <ul class=md-nav__list> <li class=md-nav__item> <a href=#docker-cant-resolve-host-on-build-time class=md-nav__link> docker - Can't resolve host on build time </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-24 class=md-nav__link> 2021-03-24 </a> <nav class=md-nav aria-label=2021-03-24> <ul class=md-nav__list> <li class=md-nav__item> <a href=#linkerd-vs-istio-on-2019 class=md-nav__link> Linkerd vs Istio on 2019 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-18 class=md-nav__link> 2021-03-18 </a> <nav class=md-nav aria-label=2021-03-18> <ul class=md-nav__list> <li class=md-nav__item> <a href=#tcp-3-way-handshake class=md-nav__link> 為什麼 TCP 要 3-way handshake </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-15 class=md-nav__link> 2021-03-15 </a> <nav class=md-nav aria-label=2021-03-15> <ul class=md-nav__list> <li class=md-nav__item> <a href=#docker-run-different-platform-architecture-images-on-apple-m1-mini class=md-nav__link> Docker - Run different platform architecture images on Apple M1 mini </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-09 class=md-nav__link> 2021-03-09 </a> <nav class=md-nav aria-label=2021-03-09> <ul class=md-nav__list> <li class=md-nav__item> <a href=#kubernetes-increase-metrics-server-resources-cpumemory class=md-nav__link> Kubernetes - Increase metrics-server resources (cpu/memory) </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-02-23 class=md-nav__link> 2021-02-23 </a> <nav class=md-nav aria-label=2021-02-23> <ul class=md-nav__list> <li class=md-nav__item> <a href=#2021-client-side-real-user-monitoring-rum class=md-nav__link> 2021 Client Side Real User Monitoring (RUM) </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-02-05 class=md-nav__link> 2021-02-05 </a> <nav class=md-nav aria-label=2021-02-05> <ul class=md-nav__list> <li class=md-nav__item> <a href=#kubernetes-use-annotation-and-initcontainer-to-donwload-gcs-files class=md-nav__link> Kubernetes - Use annotation and initContainer to donwload GCS files </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-26 class=md-nav__link> 2021-01-26 </a> <nav class=md-nav aria-label=2021-01-26> <ul class=md-nav__list> <li class=md-nav__item> <a href=#docker-build-a-userspace-wireguard-image class=md-nav__link> Docker - Build a userspace Wireguard image </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-25 class=md-nav__link> 2021-01-25 </a> <nav class=md-nav aria-label=2021-01-25> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mongodb-get-wiredtiger-stats class=md-nav__link> MongoDB - Get wiredTiger stats </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-21 class=md-nav__link> 2021-01-21 </a> <nav class=md-nav aria-label=2021-01-21> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mkdocs-material-lexers-code-block-supported-programming-languages class=md-nav__link> mkdocs-material lexers - code block supported programming languages </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-19 class=md-nav__link> 2021-01-19 </a> <nav class=md-nav aria-label=2021-01-19> <ul class=md-nav__list> <li class=md-nav__item> <a href=#ack-failed-to-provision-volume-with-storageclass-alicloud-disk-ssd-rpc-error-code-internal-desc-sdkservererror class=md-nav__link> ACK - failed to provision volume with StorageClass "alicloud-disk-ssd": rpc error: code = Internal desc = SDK.ServerError </a> </li> <li class=md-nav__item> <a href=#nginx-use-nfs-to-share-proxy_cache class=md-nav__link> Nginx - Use NFS to share proxy_cache </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-08 class=md-nav__link> 2021-01-08 </a> <nav class=md-nav aria-label=2021-01-08> <ul class=md-nav__list> <li class=md-nav__item> <a href=#gsutil-upload-file-to-aws-s3 class=md-nav__link> gsutil - Upload file to AWS S3 </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=nav-5 type=checkbox id=nav-5> <label class=md-nav__link for=nav-5> Snippets <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg> </span> </label> <nav class=md-nav aria-label=Snippets data-md-level=1> <label class=md-nav__title for=nav-5> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Snippets </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../snippets/alpine-linux/ title="Alpine linux" class=md-nav__link> Alpine linux </a> </li> <li class=md-nav__item> <a href=../../snippets/bash/ title=Bash class=md-nav__link> Bash </a> </li> <li class=md-nav__item> <a href=../../snippets/docker-compose/ title="Docker Compose" class=md-nav__link> Docker Compose </a> </li> <li class=md-nav__item> <a href=../../snippets/docker/ title=Docker class=md-nav__link> Docker </a> </li> <li class=md-nav__item> <a href=../../snippets/dockerfiles/ title=Dockerfiles class=md-nav__link> Dockerfiles </a> </li> <li class=md-nav__item> <a href=../../snippets/elasticsearch/ title=Elasticsearch class=md-nav__link> Elasticsearch </a> </li> <li class=md-nav__item> <a href=../../snippets/fun-markdown/ title="Fun markdown" class=md-nav__link> Fun markdown </a> </li> <li class=md-nav__item> <a href=../../snippets/gcp/ title=GCP class=md-nav__link> GCP </a> </li> <li class=md-nav__item> <a href=../../snippets/git/ title=Git class=md-nav__link> Git </a> </li> <li class=md-nav__item> <a href=../../snippets/github-action/ title="Github Action" class=md-nav__link> Github Action </a> </li> <li class=md-nav__item> <a href=../../snippets/gitlabci/ title="Gitlab CI" class=md-nav__link> Gitlab CI </a> </li> <li class=md-nav__item> <a href=../../snippets/http/ title=http class=md-nav__link> http </a> </li> <li class=md-nav__item> <a href=../../snippets/jenkins/ title=Jenkins class=md-nav__link> Jenkins </a> </li> <li class=md-nav__item> <a href=../../snippets/kubernetes/ title=Kubernetes class=md-nav__link> Kubernetes </a> </li> <li class=md-nav__item> <a href=../../snippets/linux/ title="Linux commands" class=md-nav__link> Linux commands </a> </li> <li class=md-nav__item> <a href=../../snippets/lua/ title=Lua class=md-nav__link> Lua </a> </li> <li class=md-nav__item> <a href=../../snippets/mac-setup/ title="Mac Setup" class=md-nav__link> Mac Setup </a> </li> <li class=md-nav__item> <a href=../../snippets/make/ title=Make class=md-nav__link> Make </a> </li> <li class=md-nav__item> <a href=../../snippets/mongo/ title=Mongo class=md-nav__link> Mongo </a> </li> <li class=md-nav__item> <a href=../../snippets/nginx/ title=Nginx class=md-nav__link> Nginx </a> </li> <li class=md-nav__item> <a href=../../snippets/visual-studio/ title="Visual Studio" class=md-nav__link> Visual Studio </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </span> Table of contents </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#2021-05-06 class=md-nav__link> 2021-05-06 </a> <nav class=md-nav aria-label=2021-05-06> <ul class=md-nav__list> <li class=md-nav__item> <a href=#kubernetes-upgrade-cert-manager-to-v131 class=md-nav__link> Kubernetes - Upgrade cert-manager to v1.3.1 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-04-29 class=md-nav__link> 2021-04-29 </a> <nav class=md-nav aria-label=2021-04-29> <ul class=md-nav__list> <li class=md-nav__item> <a href=#redis-cluster-failover class=md-nav__link> Redis - Cluster failover </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-04-15 class=md-nav__link> 2021-04-15 </a> <nav class=md-nav aria-label=2021-04-15> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mongo-sharding-not-enabled-for-db class=md-nav__link> Mongo - sharding not enabled for db </a> </li> <li class=md-nav__item> <a href=#mongo-update-on-a-sharded-collection-must-either-contain-an-exact-match-on-_id-or-must-target-a-single-shard class=md-nav__link> Mongo - update on a sharded collection must either contain an exact match on _id or must target a single shard </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-04-14 class=md-nav__link> 2021-04-14 </a> <nav class=md-nav aria-label=2021-04-14> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mongo-transaction class=md-nav__link> Mongo - transaction </a> </li> <li class=md-nav__item> <a href=#gke-neg-get-502-when-rollingupate class=md-nav__link> GKE - NEG get 502 when rollingUpate </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-04-13 class=md-nav__link> 2021-04-13 </a> <nav class=md-nav aria-label=2021-04-13> <ul class=md-nav__list> <li class=md-nav__item> <a href=#gsutil-download-large-file-with-crcmod-on-macos class=md-nav__link> gsutil - Download large file with crcmod on macOS </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-29 class=md-nav__link> 2021-03-29 </a> <nav class=md-nav aria-label=2021-03-29> <ul class=md-nav__list> <li class=md-nav__item> <a href=#kubernetes-install-cert-manager-v120 class=md-nav__link> Kubernetes - Install cert-manager v1.2.0 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-25 class=md-nav__link> 2021-03-25 </a> <nav class=md-nav aria-label=2021-03-25> <ul class=md-nav__list> <li class=md-nav__item> <a href=#docker-cant-resolve-host-on-build-time class=md-nav__link> docker - Can't resolve host on build time </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-24 class=md-nav__link> 2021-03-24 </a> <nav class=md-nav aria-label=2021-03-24> <ul class=md-nav__list> <li class=md-nav__item> <a href=#linkerd-vs-istio-on-2019 class=md-nav__link> Linkerd vs Istio on 2019 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-18 class=md-nav__link> 2021-03-18 </a> <nav class=md-nav aria-label=2021-03-18> <ul class=md-nav__list> <li class=md-nav__item> <a href=#tcp-3-way-handshake class=md-nav__link> 為什麼 TCP 要 3-way handshake </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-15 class=md-nav__link> 2021-03-15 </a> <nav class=md-nav aria-label=2021-03-15> <ul class=md-nav__list> <li class=md-nav__item> <a href=#docker-run-different-platform-architecture-images-on-apple-m1-mini class=md-nav__link> Docker - Run different platform architecture images on Apple M1 mini </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-03-09 class=md-nav__link> 2021-03-09 </a> <nav class=md-nav aria-label=2021-03-09> <ul class=md-nav__list> <li class=md-nav__item> <a href=#kubernetes-increase-metrics-server-resources-cpumemory class=md-nav__link> Kubernetes - Increase metrics-server resources (cpu/memory) </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-02-23 class=md-nav__link> 2021-02-23 </a> <nav class=md-nav aria-label=2021-02-23> <ul class=md-nav__list> <li class=md-nav__item> <a href=#2021-client-side-real-user-monitoring-rum class=md-nav__link> 2021 Client Side Real User Monitoring (RUM) </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-02-05 class=md-nav__link> 2021-02-05 </a> <nav class=md-nav aria-label=2021-02-05> <ul class=md-nav__list> <li class=md-nav__item> <a href=#kubernetes-use-annotation-and-initcontainer-to-donwload-gcs-files class=md-nav__link> Kubernetes - Use annotation and initContainer to donwload GCS files </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-26 class=md-nav__link> 2021-01-26 </a> <nav class=md-nav aria-label=2021-01-26> <ul class=md-nav__list> <li class=md-nav__item> <a href=#docker-build-a-userspace-wireguard-image class=md-nav__link> Docker - Build a userspace Wireguard image </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-25 class=md-nav__link> 2021-01-25 </a> <nav class=md-nav aria-label=2021-01-25> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mongodb-get-wiredtiger-stats class=md-nav__link> MongoDB - Get wiredTiger stats </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-21 class=md-nav__link> 2021-01-21 </a> <nav class=md-nav aria-label=2021-01-21> <ul class=md-nav__list> <li class=md-nav__item> <a href=#mkdocs-material-lexers-code-block-supported-programming-languages class=md-nav__link> mkdocs-material lexers - code block supported programming languages </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-19 class=md-nav__link> 2021-01-19 </a> <nav class=md-nav aria-label=2021-01-19> <ul class=md-nav__list> <li class=md-nav__item> <a href=#ack-failed-to-provision-volume-with-storageclass-alicloud-disk-ssd-rpc-error-code-internal-desc-sdkservererror class=md-nav__link> ACK - failed to provision volume with StorageClass "alicloud-disk-ssd": rpc error: code = Internal desc = SDK.ServerError </a> </li> <li class=md-nav__item> <a href=#nginx-use-nfs-to-share-proxy_cache class=md-nav__link> Nginx - Use NFS to share proxy_cache </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#2021-01-08 class=md-nav__link> 2021-01-08 </a> <nav class=md-nav aria-label=2021-01-08> <ul class=md-nav__list> <li class=md-nav__item> <a href=#gsutil-upload-file-to-aws-s3 class=md-nav__link> gsutil - Upload file to AWS S3 </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content> <article class="md-content__inner md-typeset"> <a href=https://github.com/RammusXu/toolkit/edit/master/docs/Today-I-Learned/2021.md title="Edit this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg> </a> <h1>2021</h1> <p>What I learned in 2021.</p> <h2 id=2021-05-06>2021-05-06<a class=headerlink href=#2021-05-06 title="Permanent link">&para;</a></h2> <h3 id=kubernetes-upgrade-cert-manager-to-v131>Kubernetes - Upgrade cert-manager to v1.3.1<a class=headerlink href=#kubernetes-upgrade-cert-manager-to-v131 title="Permanent link">&para;</a></h3> <p>Check exited CRD resources.</p> <div class=highlight><pre><span></span><code>kubectl get Issuers,ClusterIssuers,Certificates,CertificateRequests,Orders,Challenges --all-namespaces
+</code></pre></div> <p>Backup resources.</p> <div class=highlight><pre><span></span><code>kubectl get -o yaml \
+     --all-namespaces \
+     issuer,clusterissuer,certificates &gt; cert-manager-backup.yaml
+</code></pre></div> <p>Use Helm to deploy <code>cert-manager:v1.3.1</code> <div class=highlight><pre><span></span><code>helm install \
+  cert-manager jetstack/cert-manager \
+  --namespace cert-manager \
+  --create-namespace \
+  --version v1.3.1 \
+  --set installCRDs=true
+</code></pre></div></p> <h2 id=2021-04-29>2021-04-29<a class=headerlink href=#2021-04-29 title="Permanent link">&para;</a></h2> <h3 id=redis-cluster-failover>Redis - Cluster failover<a class=headerlink href=#redis-cluster-failover title="Permanent link">&para;</a></h3> <p>3 master down -&gt; cluster shutdown, can't failover to replicas -&gt; when 2 master back, still not back -&gt; need all 3 master back and re-sync</p> <p>1 master + 1 replica down -&gt; cluster shutdown -&gt; 1 master back, still not back</p> <p>2 master down -&gt; cluster shutdown -&gt; 1 master back, still not back</p> <p>conclusion:</p> <ul> <li>If cluster turns down, need all nodes re-sync to get it back.</li> <li>over 1/2 master down at same time will cause cluster down</li> <li>1 shard down will cause cluster down</li> </ul> <h2 id=2021-04-15>2021-04-15<a class=headerlink href=#2021-04-15 title="Permanent link">&para;</a></h2> <h3 id=mongo-sharding-not-enabled-for-db>Mongo - sharding not enabled for db<a class=headerlink href=#mongo-sharding-not-enabled-for-db title="Permanent link">&para;</a></h3> <div class=highlight><pre><span></span><code>sh.enableSharding<span class=o>(</span><span class=s2>&quot;mydatabase&quot;</span><span class=o>)</span>
+</code></pre></div> <h3 id=mongo-update-on-a-sharded-collection-must-either-contain-an-exact-match-on-_id-or-must-target-a-single-shard>Mongo - update on a sharded collection must either contain an exact match on _id or must target a single shard<a class=headerlink href=#mongo-update-on-a-sharded-collection-must-either-contain-an-exact-match-on-_id-or-must-target-a-single-shard title="Permanent link">&para;</a></h3> <blockquote> <p>A {multi:false} update on a sharded collection must either contain an exact match on _id or must target a single shard but this update targeted _id (and have the collection default collation) or must target a single shard (and have the simple collation), but this update targeted 2 shards. Update request: { q: { nb: 0 }, u: { $set: { date: new Date(1618511355253), c32: 13, c64: 10818 } }, multi: false, upsert: false }, shard key pattern: { c32: 1.0, c64: 1.0 }, full error: {'index': 0, 'code': 72, 'codeName': 'InvalidOptions', 'errmsg': 'A {multi:false} update on a sharded collection must either contain an exact match on _id or must target a single shard but this update targeted _id (and have the collection default collation) or must target a single shard (and have the simple collation), but this update targeted 2 shards. Update request: { q: { nb: 0 }, u: { $set: { date: new Date(1618511355253), c32: 13, c64: 10818 } }, multi: false, upsert: false }, shard key pattern: { c32: 1.0, c64: 1.0 }'}</p> </blockquote> <p>New document <em>must</em> contains shard key fields. In this case is <code>c32, c64</code>.</p> <h2 id=2021-04-14>2021-04-14<a class=headerlink href=#2021-04-14 title="Permanent link">&para;</a></h2> <h3 id=mongo-transaction>Mongo - transaction<a class=headerlink href=#mongo-transaction title="Permanent link">&para;</a></h3> <p><img alt src=../img/2021-04-14-mongo-transaction.png></p> <h3 id=gke-neg-get-502-when-rollingupate>GKE - NEG get 502 when rollingUpate<a class=headerlink href=#gke-neg-get-502-when-rollingupate title="Permanent link">&para;</a></h3> <p>credit:</p> <ul> <li><a href=https://cloud.google.com/kubernetes-engine/docs/how-to/standalone-neg#traffic_does_not_reach_the_endpoints>https://cloud.google.com/kubernetes-engine/docs/how-to/standalone-neg#traffic_does_not_reach_the_endpoints</a></li> <li><a href=https://pracucci.com/graceful-shutdown-of-kubernetes-pods.html>https://pracucci.com/graceful-shutdown-of-kubernetes-pods.html</a></li> </ul> <div class=highlight><pre><span></span><code>        lifecycle:
+          preStop:
+            exec:
+              # SIGTERM triggers a quick exit; gracefully terminate instead
+              command: [&quot;nginx&quot;, &quot;-s&quot;, &quot;quit&quot;]
+</code></pre></div> <h2 id=2021-04-13>2021-04-13<a class=headerlink href=#2021-04-13 title="Permanent link">&para;</a></h2> <h3 id=gsutil-download-large-file-with-crcmod-on-macos>gsutil - Download large file with crcmod on macOS<a class=headerlink href=#gsutil-download-large-file-with-crcmod-on-macos title="Permanent link">&para;</a></h3> <blockquote> <p><code>pip3 install -U crcmod</code></p> </blockquote> <p>Before:</p> <div class=highlight><pre><span></span><code><span class=c1># gsutil version -l</span>
+gsutil version: <span class=m>4</span>.55
+checksum: adebf7d276641651e3345d12aca978c0 <span class=o>(</span>OK<span class=o>)</span>
+boto version: <span class=m>2</span>.49.0
+python version: <span class=m>3</span>.9.4 <span class=o>(</span>default, Apr  <span class=m>5</span> <span class=m>2021</span>, <span class=m>01</span>:47:16<span class=o>)</span> <span class=o>[</span>Clang <span class=m>11</span>.0.0 <span class=o>(</span>clang-1100.0.33.17<span class=o>)]</span>
+OS: Darwin <span class=m>18</span>.7.0
+multiprocessing available: True
+using cloud sdk: True
+pass cloud sdk credentials to gsutil: True
+config path<span class=o>(</span>s<span class=o>)</span>: /Users/rammus/.boto, /Users/rammus/.config/gcloud/legacy_credentials/rammus.xu@swag.live/.boto
+gsutil path: /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gsutil
+<span class=hll>compiled crcmod: False
+</span>installed via package manager: False
+editable install: False
+</code></pre></div> <p>After:</p> <div class=highlight><pre><span></span><code><span class=c1># gsutil version -l</span>
+gsutil version: <span class=m>4</span>.55
+checksum: adebf7d276641651e3345d12aca978c0 <span class=o>(</span>OK<span class=o>)</span>
+boto version: <span class=m>2</span>.49.0
+python version: <span class=m>3</span>.9.4 <span class=o>(</span>default, Apr  <span class=m>5</span> <span class=m>2021</span>, <span class=m>01</span>:47:16<span class=o>)</span> <span class=o>[</span>Clang <span class=m>11</span>.0.0 <span class=o>(</span>clang-1100.0.33.17<span class=o>)]</span>
+OS: Darwin <span class=m>18</span>.7.0
+multiprocessing available: True
+using cloud sdk: True
+pass cloud sdk credentials to gsutil: True
+config path<span class=o>(</span>s<span class=o>)</span>: /Users/rammus/.boto, /Users/rammus/.config/gcloud/legacy_credentials/rammus.xu@swag.live/.boto
+gsutil path: /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/gsutil
+<span class=hll>compiled crcmod: True
+</span>installed via package manager: False
+editable install: False
+</code></pre></div> <h2 id=2021-03-29>2021-03-29<a class=headerlink href=#2021-03-29 title="Permanent link">&para;</a></h2> <h3 id=kubernetes-install-cert-manager-v120>Kubernetes - Install cert-manager v1.2.0<a class=headerlink href=#kubernetes-install-cert-manager-v120 title="Permanent link">&para;</a></h3> <div class=highlight><pre><span></span><code>helm repo add jetstack https://charts.jetstack.io
+helm repo update
+
+helm install <span class=se>\</span>
+  cert-manager jetstack/cert-manager <span class=se>\</span>
+  --namespace cert-manager <span class=se>\</span>
+  --version v1.2.0 <span class=se>\</span>
+  --create-namespace <span class=se>\</span>
+  --set <span class=nv>installCRDs</span><span class=o>=</span><span class=nb>true</span>
+</code></pre></div> <h2 id=2021-03-25>2021-03-25<a class=headerlink href=#2021-03-25 title="Permanent link">&para;</a></h2> <h3 id=docker-cant-resolve-host-on-build-time>docker - Can't resolve host on build time<a class=headerlink href=#docker-cant-resolve-host-on-build-time title="Permanent link">&para;</a></h3> <div class=highlight><pre><span></span><code>Resolving github.com (github.com)... failed: Name does not resolve.
+wget: unable to resolve host address &#39;github.com&#39;
+</code></pre></div> <div class="admonition solution"> <p class=admonition-title>Solution</p> <p>Upgrade docker desktop to &gt; <a href=https://github.com/docker/for-mac/issues/5020#issuecomment-760298977>3.1.0</a></p> </div> <p>This happens on my Macbook Pro (<code>docker desktop: 2.5.0.1</code>).</p> <p>It's fixed after I upgrade to <code>3.2.2</code>.</p> <h2 id=2021-03-24>2021-03-24<a class=headerlink href=#2021-03-24 title="Permanent link">&para;</a></h2> <h3 id=linkerd-vs-istio-on-2019>Linkerd vs Istio on 2019<a class=headerlink href=#linkerd-vs-istio-on-2019 title="Permanent link">&para;</a></h3> <p><a href=https://medium.com/@michael_87395/benchmarking-istio-linkerd-cpu-c36287e32781>https://medium.com/@michael_87395/benchmarking-istio-linkerd-cpu-c36287e32781</a></p> <blockquote> <p>Istio’s Envoy proxy uses more than 50% more CPU than Linkerd’s</p> </blockquote> <ul> <li>k8s: 1.12.7-gke.7</li> <li>node: n1-standard-4</li> <li>4-16 nodes</li> <li>linkerd: 2.3.0 (now: 2.10)</li> <li>istio: 1.0.6 (now: 1.9.0)</li> </ul> <h2 id=2021-03-18>2021-03-18<a class=headerlink href=#2021-03-18 title="Permanent link">&para;</a></h2> <h3 id=tcp-3-way-handshake>為什麼 TCP 要 3-way handshake<a class=headerlink href=#tcp-3-way-handshake title="Permanent link">&para;</a></h3> <p><a href=https://draveness.me/whys-the-design-tcp-three-way-handshake/ >https://draveness.me/whys-the-design-tcp-three-way-handshake/</a></p> <ul> <li>TCP 是雙向對話 (bi-directional communication protocol)</li> <li>雙方都需要 SYN, ACK</li> </ul> <div class=highlight><pre><span></span><code>Client ------SYN-----&gt; Server
+Client &lt;---ACK/SYN---- Server
+Client ------ACK-----&gt; Server
+</code></pre></div> <h2 id=2021-03-15>2021-03-15<a class=headerlink href=#2021-03-15 title="Permanent link">&para;</a></h2> <h3 id=docker-run-different-platform-architecture-images-on-apple-m1-mini>Docker - Run different platform architecture images on Apple M1 mini<a class=headerlink href=#docker-run-different-platform-architecture-images-on-apple-m1-mini title="Permanent link">&para;</a></h3> <div class=highlight><pre><span></span><code>rammus.xu@mac-mini ~ % docker run -it --rm alpine uname -a
+Linux ffb2f47751c8 <span class=m>4</span>.19.121-linuxkit <span class=c1>#1 SMP PREEMPT Thu Jan 21 15:45:22 UTC 2021 aarch64 Linux</span>
+rammus.xu@mac-mini ~ % docker run -it --rm --platform amd64 alpine uname -a
+Unable to find image <span class=s1>&#39;alpine:latest&#39;</span> locally
+latest: Pulling from library/alpine
+ba3557a56b15: Pull <span class=nb>complete</span>
+Digest: sha256:a75afd8b57e7f34e4dad8d65e2c7ba2e1975c795ce1ee22fa34f8cf46f96a3be
+Status: Downloaded newer image <span class=k>for</span> alpine:latest
+docker: Error response from daemon: image with reference alpine was found but does not match the specified platform: wanted darwin/amd64, actual: linux/amd64.
+See <span class=s1>&#39;docker run --help&#39;</span>.
+rammus.xu@mac-mini ~ % docker run -it --rm --platform linux/amd64 alpine uname -a
+Linux f313db1d82a1 <span class=m>4</span>.19.121-linuxkit <span class=c1>#1 SMP PREEMPT Thu Jan 21 15:45:22 UTC 2021 x86_64 Linux</span>
+rammus.xu@mac-mini ~ % docker run -it --rm --platform linux/i386 alpine uname -a
+Unable to find image <span class=s1>&#39;alpine:latest&#39;</span> locally
+latest: Pulling from library/alpine
+86205afa28f6: Pull <span class=nb>complete</span>
+Digest: sha256:a75afd8b57e7f34e4dad8d65e2c7ba2e1975c795ce1ee22fa34f8cf46f96a3be
+Status: Downloaded newer image <span class=k>for</span> alpine:latest
+Linux 4aff8fb39ae9 <span class=m>4</span>.19.121-linuxkit <span class=c1>#1 SMP PREEMPT Thu Jan 21 15:45:22 UTC 2021 i686 Linux</span>
+</code></pre></div> <h2 id=2021-03-09>2021-03-09<a class=headerlink href=#2021-03-09 title="Permanent link">&para;</a></h2> <h3 id=kubernetes-increase-metrics-server-resources-cpumemory>Kubernetes - Increase metrics-server resources (cpu/memory)<a class=headerlink href=#kubernetes-increase-metrics-server-resources-cpumemory title="Permanent link">&para;</a></h3> <blockquote> <p>Metrics not available for pod</p> </blockquote> <p>Ref: <a href=https://github.com/kubernetes/autoscaler/tree/master/addon-resizer>https://github.com/kubernetes/autoscaler/tree/master/addon-resizer</a></p> <p>Environment:</p> <ul> <li>Kubernetes: v1.17.15-gke.800</li> </ul> <p>It's 3-5 minutes downtime.</p> <div class=highlight><pre><span></span><code>&gt; kubectl apply -f metrics-server-config.yaml
+</code></pre></div> <div class=highlight><pre><span></span><code><span class=nt>apiVersion</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class=nt>kind</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<span class=nt>metadata</span><span class=p>:</span>
+  <span class=nt>labels</span><span class=p>:</span>
+    <span class=nt>addonmanager.kubernetes.io/mode</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">EnsureExists</span>
+    <span class=nt>kubernetes.io/cluster-service</span><span class=p>:</span> <span class=s>&quot;true&quot;</span>
+  <span class=nt>name</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">metrics-server-config</span>
+  <span class=nt>namespace</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">kube-system</span>
+<span class=nt>data</span><span class=p>:</span>
+  <span class=nt>NannyConfiguration</span><span class=p>:</span> <span class="p p-Indicator">|-</span>
+    <span class=no>apiVersion: nannyconfig/v1alpha1</span>
+    <span class=no>kind: NannyConfiguration</span>
+    <span class=no>baseCPU: 200m</span>
+    <span class=no>cpuPerNode: 2m</span>
+    <span class=no>baseMemory: 150Mi</span>
+    <span class=no>memoryPerNode: 4Mi</span>
+</code></pre></div> <div class=highlight><pre><span></span><code>&gt; kubectl delete deployment -n kube-system metrics-server-v0.3.6
+deployment.apps <span class=s2>&quot;metrics-server-v0.3.6&quot;</span> deleted
+</code></pre></div> <h2 id=2021-02-23>2021-02-23<a class=headerlink href=#2021-02-23 title="Permanent link">&para;</a></h2> <h3 id=2021-client-side-real-user-monitoring-rum>2021 Client Side Real User Monitoring (RUM)<a class=headerlink href=#2021-client-side-real-user-monitoring-rum title="Permanent link">&para;</a></h3> <p>Cloud Hosted:</p> <ul> <li>Aliyun ARMS - <a href=https://www.alibabacloud.com/help/doc-detail/58652.htm>https://www.alibabacloud.com/help/doc-detail/58652.htm</a></li> <li>pricing: <a href=https://www.alibabacloud.com/tc/product/arms/pricing>https://www.alibabacloud.com/tc/product/arms/pricing</a></li> <li>Datadog - <a href=https://www.datadoghq.com/product/real-user-monitoring/ >https://www.datadoghq.com/product/real-user-monitoring/</a></li> <li>Micro Focus - <a href=https://www.microfocus.com/en-us/products/end-user-monitoring/overview>https://www.microfocus.com/en-us/products/end-user-monitoring/overview</a></li> </ul> <p>Self Hosted:</p> <ul> <li>Elastic - <a href=https://www.elastic.co/guide/en/apm/agent/rum-js/current/intro.html>https://www.elastic.co/guide/en/apm/agent/rum-js/current/intro.html</a></li> <li>boomerang - <a href=https://github.com/akamai/boomerang>https://github.com/akamai/boomerang</a></li> <li>server:<ul> <li>2018 <a href=https://github.com/springernature/boomcatch>https://github.com/springernature/boomcatch</a></li> <li>2016 <a href=https://github.com/andreas-marschke/boomerang-express>https://github.com/andreas-marschke/boomerang-express</a></li> </ul> </li> <li><a href=https://matomo.org/ >https://matomo.org/</a></li> <li>demo: <a href=https://demo.matomo.cloud/index.php>https://demo.matomo.cloud/index.php</a></li> <li><a href=https://github.com/basicrum/backoffice>https://github.com/basicrum/backoffice</a></li> </ul> <h2 id=2021-02-05>2021-02-05<a class=headerlink href=#2021-02-05 title="Permanent link">&para;</a></h2> <h3 id=kubernetes-use-annotation-and-initcontainer-to-donwload-gcs-files>Kubernetes - Use annotation and initContainer to donwload GCS files<a class=headerlink href=#kubernetes-use-annotation-and-initcontainer-to-donwload-gcs-files title="Permanent link">&para;</a></h3> <div class=highlight><pre><span></span><code><span class=nt>apiVersion</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class=nt>kind</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class=nt>metadata</span><span class=p>:</span>
+  <span class=nt>name</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class=nt>spec</span><span class=p>:</span>
+  <span class=nt>selector</span><span class=p>:</span>
+    <span class=nt>matchLabels</span><span class=p>:</span>
+      <span class=nt>app</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">demo</span>
+  <span class=nt>replicas</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class=nt>template</span><span class=p>:</span>
+    <span class=nt>metadata</span><span class=p>:</span>
+      <span class=nt>labels</span><span class=p>:</span>
+        <span class=nt>app</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">demo</span>
+      <span class=nt>annotations</span><span class=p>:</span>
+        <span class=nt>update</span><span class=p>:</span> <span class=s>&quot;true&quot;</span>
+    <span class=nt>spec</span><span class=p>:</span>
+      <span class=nt>volumes</span><span class=p>:</span>
+      <span class="p p-Indicator">-</span> <span class=nt>name</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">assets</span>
+        <span class=nt>emptyDir</span><span class=p>:</span> <span class="p p-Indicator">{}</span>
+      <span class=nt>initContainers</span><span class=p>:</span>
+      <span class="p p-Indicator">-</span> <span class=nt>name</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">download-assets</span>
+        <span class=nt>image</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">gcr.io/google.com/cloudsdktool/cloud-sdk:315.0.0-alpine</span>
+        <span class=nt>command</span><span class=p>:</span> <span class="p p-Indicator">[</span><span class=s>&quot;/bin/bash&quot;</span><span class="p p-Indicator">,</span><span class=s>&quot;-c&quot;</span><span class="p p-Indicator">]</span>
+        <span class=nt>env</span><span class=p>:</span>
+        <span class="p p-Indicator">-</span> <span class=nt>name</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">IF_UPDATE</span>
+          <span class=nt>valueFrom</span><span class=p>:</span>
+            <span class=nt>fieldRef</span><span class=p>:</span>
+              <span class=nt>fieldPath</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">metadata.annotations[&#39;update&#39;]</span>
+        <span class=nt>args</span><span class=p>:</span>
+        <span class="p p-Indicator">-</span> <span class="p p-Indicator">|</span>
+          <span class=no>[ &quot;$IF_UPDATE&quot; = &quot;false&quot; ] &amp;&amp; exit 0</span>
+          <span class=no>gsutil -m cp -r gs://rammus.tw/assets /assets</span>
+
+        <span class=nt>volumeMounts</span><span class=p>:</span>
+        <span class="p p-Indicator">-</span> <span class=nt>name</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">assets</span>
+          <span class=nt>mountPath</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">/assets</span>
+      <span class=nt>containers</span><span class=p>:</span>
+      <span class="p p-Indicator">-</span> <span class=nt>name</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+        <span class=nt>image</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+        <span class=nt>ports</span><span class=p>:</span>
+        <span class="p p-Indicator">-</span> <span class=nt>containerPort</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+        <span class=nt>volumeMounts</span><span class=p>:</span>
+        <span class="p p-Indicator">-</span> <span class=nt>name</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">assets</span>
+          <span class=nt>mountPath</span><span class=p>:</span> <span class="l l-Scalar l-Scalar-Plain">/assets</span>
+</code></pre></div> <h2 id=2021-01-26>2021-01-26<a class=headerlink href=#2021-01-26 title="Permanent link">&para;</a></h2> <h3 id=docker-build-a-userspace-wireguard-image>Docker - Build a userspace Wireguard image<a class=headerlink href=#docker-build-a-userspace-wireguard-image title="Permanent link">&para;</a></h3> <p><code>ghcr.io/linuxserver/wireguard</code> default to use Linux kernal library. If you want to use userspace library or your machine doesn't support Linux kernal library.</p> <div class=highlight><pre><span></span><code><span class=k>FROM</span> <span class=s>rust:1.40-slim-buster</span> <span class=k>AS</span> <span class=s>builder</span>
+
+<span class=k>ARG</span> <span class=nv>BORINGTUN_VERSION</span><span class=o>=</span><span class=m>0</span>.3.0
+
+<span class=k>RUN</span> cargo install boringtun --version <span class=si>${</span><span class=nv>BORINGTUN_VERSION</span><span class=si>}</span>
+
+<span class=c>###</span>
+
+<span class=k>FROM</span> <span class=s>ghcr.io/linuxserver/wireguard:version-v1.0.20200827</span>
+
+<span class=k>COPY</span> --from<span class=o>=</span>builder /usr/local/cargo/bin/boringtun /usr/local/bin
+
+<span class=k>ENV</span> <span class=nv>WG_QUICK_USERSPACE_IMPLEMENTATION</span><span class=o>=</span>boringtun <span class=se>\</span>
+    <span class=nv>WG_SUDO</span><span class=o>=</span><span class=m>1</span>
+</code></pre></div> <h2 id=2021-01-25>2021-01-25<a class=headerlink href=#2021-01-25 title="Permanent link">&para;</a></h2> <h3 id=mongodb-get-wiredtiger-stats>MongoDB - Get wiredTiger stats<a class=headerlink href=#mongodb-get-wiredtiger-stats title="Permanent link">&para;</a></h3> <p>ref: <a href=https://docs.mongodb.com/manual/reference/command/serverStatus/#wiredtiger>https://docs.mongodb.com/manual/reference/command/serverStatus/#wiredtiger</a></p> <div class=highlight><pre><span></span><code>db.runCommand<span class=o>(</span> <span class=o>{</span> serverStatus: <span class=m>1</span> <span class=o>}</span> <span class=o>)</span>.wiredTiger
+</code></pre></div> <h2 id=2021-01-21>2021-01-21<a class=headerlink href=#2021-01-21 title="Permanent link">&para;</a></h2> <h3 id=mkdocs-material-lexers-code-block-supported-programming-languages>mkdocs-material lexers - code block supported programming languages<a class=headerlink href=#mkdocs-material-lexers-code-block-supported-programming-languages title="Permanent link">&para;</a></h3> <p><a href=https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#specifying-the-language>mkdocs-material</a> 使用 <a href=https://pygments.org/docs/lexers/ >pygments</a> 當作語法分析器，以下是能支援的程式語言</p> <div class=highlight><pre><span></span><code>as3, actionscript3
+as, actionscript
+mxml
+bc
+gap
+mathematica, mma, nb
+mupad
+at, ambienttalk, ambienttalk/2
+ampl
+apl
+adl
+cadl
+odin
+arrow
+c-objdump
+ca65
+cpp-objdump, c++-objdumb, cxx-objdump
+d-objdump
+dasm16
+gas, asm
+hsail, hsa
+llvm
+llvm-mir-body
+llvm-mir
+nasm
+objdump-nasm
+objdump
+tasm
+autoit
+ahk, autohotkey
+bare
+bbcbasic
+blitzbasic, b3d, bplus
+blitzmax, bmax
+cbmbas
+monkey
+qbasic, basic
+vbscript
+bst, bst-pybtex
+bib, bibtex
+boa
+abap
+cobolfree
+cobol
+gooddata-cl
+maql
+openedge, abl, progress
+c
+cpp, c++
+arduino
+charmci
+clay
+cuda, cu
+ec
+mql, mq4, mq5, mql4, mql5
+nesc
+pike
+swig
+vala, vapi
+capnp
+chapel, chpl
+clean
+apacheconf, aconf, apache
+augeas
+cfengine3, cf3
+docker, dockerfile
+ini, cfg, dosini
+kconfig, menuconfig, linux-config, kernel-config
+lighty, lighttpd
+nginx
+pacmanconf
+pkgconfig
+properties, jproperties
+registry
+singularity
+squidconf, squid.conf, squid
+toml
+termcap
+terminfo
+terraform, tf
+pypylog, pypy
+vctreestatus
+cr, crystal
+csound-document, csound-csd
+csound, csound-orc
+csound-score, csound-sco
+css
+less
+sass
+scss
+croc
+d
+minid
+smali
+None
+jsonld, json-ld
+json, json-object
+yaml
+devicetree, dts
+dpatch
+diff, udiff
+wdiff
+boo
+aspx-cs
+csharp, c#
+fsharp, f#
+nemerle
+aspx-vb
+vb.net, vbnet
+alloy
+crmsh, pcmk
+flatline
+mscgen, msc
+pan
+protobuf, proto
+puppet
+rsl
+snowball
+thrift
+vgl
+zeek, bro
+dylan-console, dylan-repl
+dylan
+dylan-lid, lid
+ecl
+eiffel
+elm
+email, eml
+iex
+elixir, ex, exs
+erlang
+erl
+aheui
+befunge
+brainfuck, bf
+camkes, idl4
+capdl
+redcode
+ezhil
+factor
+fan
+felix, flx
+floscript, flo
+forth
+fortranfixed
+fortran
+foxpro, vfp, clipper, xbase
+freefem
+gdscript, gd
+go
+abnf
+bnf
+jsgf
+peg
+cypher
+asy, asymptote
+glsl
+gnuplot
+hlsl
+postscript, postscr
+pov
+agda
+cryptol, cry
+haskell, hs
+hspec
+idris, idr
+koka
+lagda, literate-agda
+lcry, literate-cryptol, lcryptol
+lhs, literate-haskell, lhaskell
+lidr, literate-idris, lidris
+hx, haxe, hxsl
+haxeml, hxml
+systemverilog, sv
+verilog, v
+vhdl
+hexdump
+dtd
+haml
+html
+pug, jade
+scaml
+xml
+xslt
+idl
+igor, igorpro
+limbo
+control, debcontrol
+nsis, nsi, nsh
+spec
+sourceslist, sources.list, debsources
+inform6, i6
+i6t
+inform7, i7
+tads3
+io
+j
+coffee-script, coffeescript, coffee
+dart
+earl-grey, earlgrey, eg
+js, javascript
+juttle
+kal
+lasso, lassoscript
+live-script, livescript
+mask
+objective-j, objectivej, obj-j, objj
+ts, typescript
+jlcon
+julia, jl
+aspectj
+ceylon
+clojure, clj
+clojurescript, cljs
+golo
+gosu
+gst
+groovy
+ioke, ik
+jasmin, jasminxt
+java
+kotlin
+pig
+sarl
+scala
+xtend
+cpsa
+common-lisp, cl, lisp
+emacs, elisp, emacs-lisp
+fennel, fnl
+hylang
+newlisp
+racket, rkt
+scheme, scm
+shen
+extempore
+basemake
+cmake
+make, makefile, mf, bsdmake
+bbcode
+groff, nroff, man
+md, markdown
+trac-wiki, moin
+css+mozpreproc
+mozhashpreproc
+javascript+mozpreproc
+mozpercentpreproc
+xul+mozpreproc
+rst, rest, restructuredtext
+tex, latex
+tid
+matlab
+matlabsession
+octave
+scilab
+mime
+fstar
+ocaml
+opa
+reason, reasonml
+sml
+bugs, winbugs, openbugs
+jags
+modelica
+stan
+modula2, m2
+monte
+mosel
+ncl
+nim, nimrod
+nit
+nixos, nix
+componentpascal, cp
+logos
+objective-c, objectivec, obj-c, objc
+objective-c++, objectivec++, obj-c++, objc++
+swift
+ooc
+parasail
+antlr-as, antlr-actionscript
+antlr-csharp, antlr-c#
+antlr-cpp
+antlr-java
+antlr
+antlr-objc
+antlr-perl
+antlr-python
+antlr-ruby, antlr-rb
+ebnf
+ragel-c
+ragel-cpp
+ragel-d
+ragel-em
+ragel-java
+ragel
+ragel-objc
+ragel-ruby, ragel-rb
+treetop
+ada, ada95, ada2005
+delphi, pas, pascal, objectpascal
+pawn
+sp
+perl6, pl6, raku
+perl, pl
+php, php3, php4, php5
+psysh
+zephir
+pointless
+pony
+praat
+logtalk
+prolog
+promql
+cython, pyx, pyrex
+dg
+numpy
+python2, py2
+py2tb
+pycon
+python, py, sage, python3, py3
+pytb, py3tb
+qvto, qvt
+rconsole, rout
+rd
+splus, s, r
+shexc, shex
+sparql
+turtle
+rebol
+red, red/system
+resource, resourcebundle
+ride
+rnc, rng-compact
+roboconf-graph
+roboconf-instances
+robotframework
+fancy, fy
+rbcon, irb
+rb, ruby, duby
+rust, rs
+sas
+scdoc, scd
+applescript
+chai, chaiscript
+easytrieve
+hybris, hy
+jcl
+lsl
+lua
+moocode, moo
+ms, miniscript
+moon, moonscript
+rexx, arexx
+sgf
+bash, sh, ksh, zsh, shell
+console, shell-session
+bat, batch, dosbatch, winbatch
+execline
+fish, fishshell
+doscon
+powershell, posh, ps1, psm1
+ps1con
+slurm, sbatch
+tcsh, csh
+tcshcon
+sieve
+slash
+newspeak
+smalltalk, squeak, st
+nusmv
+snobol
+solidity
+raw
+text
+mysql
+plpgsql
+psql, postgresql-console, postgres-console
+postgresql, postgres
+rql
+sql
+sqlite3
+tsql, t-sql
+stata, do
+sc, supercollider
+tcl
+html+ng2
+ng2
+html+cheetah, html+spitfire, htmlcheetah
+js+cheetah, javascript+cheetah, js+spitfire, javascript+spitfire
+cheetah, spitfire
+xml+cheetah, xml+spitfire
+cfc
+cfm
+cfs
+css+django, css+jinja
+css+erb, css+ruby
+css+genshitext, css+genshi
+css+php
+css+smarty
+django, jinja
+erb
+html+evoque
+evoque
+xml+evoque
+genshi, kid, xml+genshi, xml+kid
+genshitext
+html+handlebars
+handlebars
+html+django, html+jinja, htmldjango
+html+genshi, html+kid
+html+php
+html+smarty
+js+django, javascript+django, js+jinja, javascript+jinja
+js+erb, javascript+erb, js+ruby, javascript+ruby
+js+genshitext, js+genshi, javascript+genshitext, javascript+genshi
+js+php, javascript+php
+js+smarty, javascript+smarty
+jsp
+css+lasso
+html+lasso
+js+lasso, javascript+lasso
+xml+lasso
+liquid
+css+mako
+html+mako
+js+mako, javascript+mako
+mako
+xml+mako
+mason
+css+myghty
+html+myghty
+js+myghty, javascript+myghty
+myghty
+xml+myghty
+rhtml, html+erb, html+ruby
+smarty
+ssp
+tea
+html+twig
+twig
+html+velocity
+velocity
+xml+velocity
+xml+django, xml+jinja
+xml+erb, xml+ruby
+xml+php
+xml+smarty
+yaml+jinja, salt, sls
+ttl, teraterm, teratermmacro
+cucumber, gherkin
+tap
+awk, gawk, mawk, nawk
+vim
+pot, po
+http
+irc
+kmsg, dmesg
+notmuch
+todotxt
+coq
+isabelle
+lean
+tnt
+rts, trafficscript
+typoscriptcssdata
+typoscripthtmldata
+typoscript
+icon
+ucode
+unicon
+urbiscript
+usd, usda
+vcl
+vclsnippets, vclsnippet
+boogie
+silver
+webidl
+cirru
+duel, jbst, jsonml+bst
+qml, qbs
+slim
+xquery, xqy, xq, xql, xqm
+whiley
+x10, xten
+xorg.conf
+yang
+zig
+</code></pre></div> <h2 id=2021-01-19>2021-01-19<a class=headerlink href=#2021-01-19 title="Permanent link">&para;</a></h2> <h3 id=ack-failed-to-provision-volume-with-storageclass-alicloud-disk-ssd-rpc-error-code-internal-desc-sdkservererror>ACK - failed to provision volume with StorageClass "alicloud-disk-ssd": rpc error: code = Internal desc = SDK.ServerError<a class=headerlink href=#ack-failed-to-provision-volume-with-storageclass-alicloud-disk-ssd-rpc-error-code-internal-desc-sdkservererror title="Permanent link">&para;</a></h3> <blockquote> <p>ErrorCode: InvalidDiskSize.NotSupported</p> </blockquote> <p>因為申請太小的容量，所以出現這個錯誤。</p> <p>ref: <a href=https://help.aliyun.com/document_detail/127601.html>https://help.aliyun.com/document_detail/127601.html</a></p> <ul> <li>高效云盘：最小20 GiB。</li> <li>SSD云盘：最小20 GiB。</li> <li>ESSD云盘：最小20 GiB。</li> </ul> <h3 id=nginx-use-nfs-to-share-proxy_cache>Nginx - Use NFS to share proxy_cache<a class=headerlink href=#nginx-use-nfs-to-share-proxy_cache title="Permanent link">&para;</a></h3> <div class=highlight><pre><span></span><code><span class=nx>proxy_cache_path</span> <span class=o>/</span><span class=kd>var</span><span class=err>/cache/nginx levels=1:2 keys_zone=storage:128m inactive=1y max_size=64G use_temp_path=off;</span>
+</code></pre></div> <p>Must to add <code>use_temp_path=off</code> which default to <code>on</code>.</p> <h2 id=2021-01-08>2021-01-08<a class=headerlink href=#2021-01-08 title="Permanent link">&para;</a></h2> <h3 id=gsutil-upload-file-to-aws-s3>gsutil - Upload file to AWS S3<a class=headerlink href=#gsutil-upload-file-to-aws-s3 title="Permanent link">&para;</a></h3> <p>Least AWS user permission. <div class=highlight><pre><span></span><code><span class=p>{</span>
+    <span class=nt>&quot;Version&quot;</span><span class=p>:</span> <span class=s2>&quot;2012-10-17&quot;</span><span class=p>,</span>
+    <span class=nt>&quot;Statement&quot;</span><span class=p>:</span> <span class=p>[</span>
+        <span class=p>{</span>
+            <span class=nt>&quot;Sid&quot;</span><span class=p>:</span> <span class=s2>&quot;VisualEditor0&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;Effect&quot;</span><span class=p>:</span> <span class=s2>&quot;Allow&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;Action&quot;</span><span class=p>:</span> <span class=p>[</span>
+                <span class=s2>&quot;s3:PutObject&quot;</span><span class=p>,</span>
+                <span class=s2>&quot;s3:PutObjectAcl&quot;</span><span class=p>,</span>
+                <span class=s2>&quot;s3:GetObject&quot;</span><span class=p>,</span>
+                <span class=s2>&quot;s3:GetObjectAcl&quot;</span><span class=p>,</span>
+                <span class=s2>&quot;s3:DeleteObject&quot;</span>
+            <span class=p>],</span>
+            <span class=nt>&quot;Resource&quot;</span><span class=p>:</span> <span class=s2>&quot;arn:aws:s3:::backup.rammus.tw/*&quot;</span>
+        <span class=p>},</span>
+        <span class=p>{</span>
+            <span class=nt>&quot;Sid&quot;</span><span class=p>:</span> <span class=s2>&quot;VisualEditor1&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;Effect&quot;</span><span class=p>:</span> <span class=s2>&quot;Allow&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;Action&quot;</span><span class=p>:</span> <span class=p>[</span>
+                <span class=s2>&quot;s3:ListBucket&quot;</span><span class=p>,</span>
+                <span class=s2>&quot;s3:GetBucketLocation&quot;</span>
+            <span class=p>],</span>
+            <span class=nt>&quot;Resource&quot;</span><span class=p>:</span> <span class=s2>&quot;arn:aws:s3:::backup.rammus.tw&quot;</span>
+        <span class=p>}</span>
+    <span class=p>]</span>
+<span class=p>}</span>
+</code></pre></div></p> <p>Generate configuration <div class=highlight><pre><span></span><code><span class=nb>export</span> <span class=nv>AWS_ACCESS_KEY_ID</span><span class=o>=</span>
+<span class=nb>export</span> <span class=nv>AWS_SECRET_ACCESS_KEY</span><span class=o>=</span>
+
+cat <span class=s>&lt;&lt; EOF &gt; ~/.boto</span>
+<span class=s>[Credentials]</span>
+<span class=s>aws_access_key_id = $AWS_ACCESS_KEY_ID</span>
+<span class=s>aws_secret_access_key = $AWS_SECRET_ACCESS_KEY</span>
+
+<span class=s>[s3]</span>
+<span class=s>calling_format = boto.s3.connection.OrdinaryCallingFormat</span>
+<span class=s>use-sigv4=True</span>
+<span class=s>host=s3.ap-northeast-1.amazonaws.com</span>
+<span class=s>EOF</span>
+</code></pre></div></p> <p>Start to uplaod <div class=highlight><pre><span></span><code>gsutil cp a s3://backup.rammus.tw
+</code></pre></div></p> <hr> <div class=md-source-date> <small> Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 6, 2021</span> </small> </div> <h2 id=__comments>Comments</h2> <div id=disqus_thread></div> <script>var disqus_config=function(){this.page.url="https://rammusxu.github.io/toolkit/Today-I-Learned/2021/",this.page.identifier="/Today-I-Learned/2021/"};!function(){var e=document,i=e.createElement("script");i.src="//rammusxu.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script> </article> </div> </div> </main> <footer class=md-footer> <div class=md-footer-nav> <nav class="md-footer-nav__inner md-grid" aria-label=Footer> <a href=../2020/ title=2020 class="md-footer-nav__link md-footer-nav__link--prev" rel=prev> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </div> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Previous </span> 2020 </div> </div> </a> <a href=../../snippets/alpine-linux/ title="Alpine linux" class="md-footer-nav__link md-footer-nav__link--next" rel=next> <div class=md-footer-nav__title> <div class=md-ellipsis> <span class=md-footer-nav__direction> Next </span> Alpine linux </div> </div> <div class="md-footer-nav__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg> </div> </a> </nav> </div> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-footer-copyright> <div class=md-footer-copyright__highlight> <a href=http://creativecommons.org/licenses/by-nc-nd/4.0/ rel=license><img alt="Creative Commons License" style=border-width:0 src=https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png></a> <br> Copyright © 2015- Rammus Xu </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> <div class=md-footer-social> <a href=https://github.com/rammusxu target=_blank rel=noopener title=github.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg> </a> <a href=https://www.linkedin.com/in/rammusxu target=_blank rel=noopener title=www.linkedin.com class=md-footer-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg> </a> </div> </div> </div> </footer> </div> <script src=../../assets/javascripts/vendor.a0c4167b.min.js></script> <script src=../../assets/javascripts/bundle.fb26dd1d.min.js></script><script id=__lang type=application/json>{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script> <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script> </body> </html>
